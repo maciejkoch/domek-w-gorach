@@ -1,1 +1,21 @@
+---
+import images from "../data/gallery.json";
+---
+
 <div>here comes gallery as a list of images</div>
+<ul>
+  {
+    images.map((item) => (
+      <li>
+        <img src={item.url} alt={item.alt} />
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  img {
+    width: 200px;
+    height: auto;
+  }
+</style>

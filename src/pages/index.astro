@@ -1,13 +1,21 @@
 ---
+import { getEntryBySlug } from "astro:content";
+
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Carousel from "../components/Carousel.astro";
+
+import { Content as DescriptionContent } from "../content/description.md";
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
-    Main content
     <Hero />
+
+    <div class="text">
+      <DescriptionContent />
+    </div>
+
     <Carousel />
   </main>
 </Layout>
