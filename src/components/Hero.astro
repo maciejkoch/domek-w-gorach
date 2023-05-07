@@ -1,8 +1,16 @@
+---
+import { Picture } from "@astrojs/image/components";
+
+const src =
+  "https://ireland.apollo.olxcdn.com/v1/files/7qarmljyc36u1-PL/image;s=2508x1672";
+const alt = "Domek na granicy";
+const ratio = "2:1";
+const widths = [400, 800, 1200];
+---
+
 <h2>This is hero</h2>
-<img
-  src="https://ireland.apollo.olxcdn.com/v1/files/7qarmljyc36u1-PL/image;s=2508x1672"
-  alt="Domek na granicy"
-/>
+
+<Picture src={src} widths={widths} aspectRatio={ratio} alt={alt} />
 
 <style>
   h2 {
