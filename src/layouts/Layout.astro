@@ -1,4 +1,6 @@
 ---
+import { Sprite } from "astro-icon";
+
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
@@ -19,9 +21,11 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <Header />
-    <slot />
-    <Footer />
+    <Sprite.Provider>
+      <Header />
+      <slot />
+      <Footer />
+    </Sprite.Provider>
   </body>
 </html>
 <style lang="scss" is:global>
@@ -55,5 +59,10 @@ const { title } = Astro.props;
   .container {
     max-width: 1400px;
     margin: 0 auto;
+  }
+
+  [astro-icon] {
+    width: 40px;
+    height: 40px;
   }
 </style>

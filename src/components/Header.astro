@@ -1,3 +1,7 @@
+---
+import { Sprite } from "astro-icon";
+---
+
 <header class="header">
   <div class="container header__container">
     <div class="logo">
@@ -24,20 +28,15 @@
         class="mobile-menu-burger js-open-menu"
         aria-expanded="false"
         aria-controls="mobile-menu"
-        ><p>=</p>
-        <svg width="20" height="12">
-          <use href="./images/icons.svg#icon-mobile-menu"></use>
-        </svg>
+      >
+        <Sprite name="mdi:menu" />
       </button>
     </div>
   </div>
 
   <div class="menu-container js-menu-container" id="mobile-menu">
     <button class="mobile-menu-closing-icon js-close-menu">
-      <p>X</p>
-      <svg width="14" height="14">
-        <use href="./images-and-icons/#icon-close_40px"></use>
-      </svg>
+      <Sprite name="mdi:close" />
     </button>
 
     <ul class="mobile-menu">
