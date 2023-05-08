@@ -1,0 +1,78 @@
+---
+import "./header.scss";
+import { Sprite } from "astro-icon";
+---
+
+<header class="header">
+  <div class="container header__container">
+    <div class="logo">
+      <a class="link" href="./index.html">
+        <img
+          src="./images/logo-x1.png"
+          alt="brand logo"
+          width="199"
+          height="50"
+        />
+      </a>
+    </div>
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item">Poznaj nas</li>
+        <li class="navigation__item">Oferta</li>
+        <li class="navigation__item">Galeria</li>
+        <li class="navigation__item">Atrakcje w pobliżu</li>
+        <li class="navigation__item">Kontakt</li>
+      </ul>
+    </nav>
+    <div class="header__mobile-switch">
+      <button
+        class="mobile-menu-burger js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <Sprite name="mdi:menu" />
+      </button>
+    </div>
+  </div>
+
+  <div class="menu-container js-menu-container" id="mobile-menu">
+    <button class="mobile-menu-closing-icon js-close-menu">
+      <Sprite name="mdi:close" />
+    </button>
+
+    <ul class="mobile-menu">
+      <li class="mobile-menu__item">
+        <a
+          class="mobile-menu__link mobile-menu__link--active js-close-menu"
+          href="#hero">Poznaj nas</a
+        >
+      </li>
+      <li class="mobile-menu__item">
+        <a
+          class="mobile-menu__link mobile-menu__link--active js-close-menu"
+          href="#hero">Oferta</a
+        >
+      </li>
+      <li class="mobile-menu__item">
+        <a
+          class="mobile-menu__link mobile-menu__link--active js-close-menu"
+          href="#hero">Galeria</a
+        >
+      </li>
+      <li class="mobile-menu__item">
+        <a
+          class="mobile-menu__link mobile-menu__link--active js-close-menu"
+          href="#hero">Atrakcje w pobliżu</a
+        >
+      </li>
+      <li class="mobile-menu__item">
+        <a
+          class="mobile-menu__link mobile-menu__link--active js-close-menu"
+          href="#hero">Kontakt</a
+        >
+      </li>
+    </ul>
+  </div>
+</header>
+
+<script src="./header.ts"></script>
