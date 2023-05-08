@@ -1,0 +1,34 @@
+.hero {
+  &__container {
+    padding: 60px 0px 40px 60px;
+  }
+
+  &__headline {
+    font-size: 70px;
+    line-height: 1;
+    text-align: left;
+    color: white;
+  }
+
+  &__link-container {
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    color: var(--dark-background-color);
+    font-size: 18px;
+  }
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+[astro-icon="icomoon-free:airplane"] {
+  color: red;
+  width: 12px;
+  height: 12px;
+}
