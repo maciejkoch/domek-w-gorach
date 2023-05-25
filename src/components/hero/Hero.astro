@@ -1,0 +1,32 @@
+---
+import { Picture } from "@astrojs/image/components";
+import { Sprite } from "astro-icon";
+import "./hero.scss";
+
+const src =
+  "https://ireland.apollo.olxcdn.com/v1/files/7qarmljyc36u1-PL/image;s=2508x1672";
+const alt = "Domek na granicy";
+const ratio = "2:1";
+const widths = [400, 800, 1200];
+---
+
+<div class="hero">
+  <div class="hero__container">
+    <h2 class="hero__headline">
+      Odpocznij, <br />
+      ciesz się chwilą <br />
+      w bliskości z naturą
+    </h2>
+    <div class="hero__link-container">
+      <a class="hero__link" href="#about-us">Poznaj nas</a>
+      <Sprite
+        class="media-icon"
+        name="ic:baseline-keyboard-arrow-right"
+        width="24"
+        height="24"
+      />
+    </div>
+  </div>
+
+  <Picture src={src} widths={widths} aspectRatio={ratio} alt={alt} />
+</div>
