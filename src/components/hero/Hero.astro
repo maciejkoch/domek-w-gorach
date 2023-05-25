@@ -8,25 +8,19 @@ const src =
 const alt = "Domek na granicy";
 const ratio = "2:1";
 const widths = [400, 800, 1200];
+const text = `Odpocznij, <br />ciesz się chwilą <br />w bliskości z naturą`;
+const aboutUsText = `Poznaj nas`;
 ---
 
 <div class="hero">
+  <Picture src={src} widths={widths} aspectRatio={ratio} alt={alt} />
   <div class="hero__container">
     <h2 class="hero__headline">
-      Odpocznij, <br />
-      ciesz się chwilą <br />
-      w bliskości z naturą
+      <Fragment set:html={text} />
     </h2>
-    <div class="hero__link-container">
-      <a class="hero__link" href="#about-us">Poznaj nas</a>
-      <Sprite
-        class="media-icon"
-        name="ic:baseline-keyboard-arrow-right"
-        width="24"
-        height="24"
-      />
+    <div class="hero__link">
+      <a href="#about-us">{aboutUsText}</a>
+      <Sprite name="ic:baseline-keyboard-arrow-right" width="24" height="24" />
     </div>
   </div>
-
-  <Picture src={src} widths={widths} aspectRatio={ratio} alt={alt} />
 </div>

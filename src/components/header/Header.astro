@@ -1,6 +1,29 @@
 ---
 import "./header.scss";
 import { Sprite } from "astro-icon";
+
+const items = [
+  {
+    name: "Poznaj nas",
+    link: "#header",
+  },
+  {
+    name: "Galeria",
+    link: "#hero",
+  },
+  {
+    name: "Oferta",
+    link: "#hero",
+  },
+  {
+    name: "Atrakcje w pobliżu",
+    link: "#hero",
+  },
+  {
+    name: "Kontakt",
+    link: "#hero",
+  },
+];
 ---
 
 <header class="header" id="header">
@@ -12,11 +35,7 @@ import { Sprite } from "astro-icon";
     </div>
     <nav class="navigation">
       <ul class="navigation__list">
-        <li class="navigation__item">Poznaj nas</li>
-        <li class="navigation__item">Oferta</li>
-        <li class="navigation__item">Galeria</li>
-        <li class="navigation__item">Atrakcje w pobliżu</li>
-        <li class="navigation__item">Kontakt</li>
+        {items.map((item) => <li class="navigation__item">{item.name}</li>)}
       </ul>
     </nav>
     <div class="media-links-container">
@@ -44,36 +63,18 @@ import { Sprite } from "astro-icon";
     </button>
 
     <ul class="mobile-menu">
-      <li class="mobile-menu__item">
-        <a
-          class="mobile-menu__link mobile-menu__link--active js-close-menu"
-          href="#header">Poznaj nas</a
-        >
-      </li>
-      <li class="mobile-menu__item">
-        <a
-          class="mobile-menu__link mobile-menu__link--active js-close-menu"
-          href="#hero">Oferta</a
-        >
-      </li>
-      <li class="mobile-menu__item">
-        <a
-          class="mobile-menu__link mobile-menu__link--active js-close-menu"
-          href="#hero">Galeria</a
-        >
-      </li>
-      <li class="mobile-menu__item">
-        <a
-          class="mobile-menu__link mobile-menu__link--active js-close-menu"
-          href="#hero">Atrakcje w pobliżu</a
-        >
-      </li>
-      <li class="mobile-menu__item">
-        <a
-          class="mobile-menu__link mobile-menu__link--active js-close-menu"
-          href="#hero">Kontakt</a
-        >
-      </li>
+      {
+        items.map((item) => (
+          <li class="mobile-menu__item">
+            <a
+              class="mobile-menu__link mobile-menu__link--active js-close-menu"
+              href={item.link}
+            >
+              {item.name}
+            </a>
+          </li>
+        ))
+      }
     </ul>
   </div>
 </header>
