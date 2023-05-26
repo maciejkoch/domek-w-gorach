@@ -1,28 +1,27 @@
 @import "../../styles/breakpoints.scss";
 
 .header {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 10px 0px;
+
   &__container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    background-color: white;
-    //sticky nav
-    position: fixed;
-    top: 0;
-    z-index: 100;
   }
 }
 
 .logo-icon {
   color: var(--dark-background-color);
-  padding: 10px 40px;
 }
 
 .media-icon {
   color: var(--dark-background-color);
-  padding-right: 20px;
 }
 
 .navigation {
@@ -33,7 +32,6 @@
     display: flex;
 
     &__list {
-      list-style: none;
       width: 100%;
       display: flex;
     }

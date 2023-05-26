@@ -1,0 +1,80 @@
+---
+import "./gallery.scss";
+
+import { Image } from "@astrojs/image/components";
+import images from "../../data/gallery.json";
+
+const ariaLabel = "Gallery of images";
+const thumbnailAriaLabel = "Thumbnail gallery of images";
+---
+
+<section class="container">
+  <div id="main-carousel" class="splide" aria-label={ariaLabel}>
+    <div class="splide__track">
+      <ul class="splide__list">
+        {
+          images.map((item) => (
+            <li class="splide__slide">
+              <Image
+                src={item.url}
+                width={1280}
+                height={642}
+                aspectRatio="2:1"
+                format="avif"
+                alt={item.alt}
+              />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+  <div id="thumbnail-carousel" class="splide" aria-label={thumbnailAriaLabel}>
+    <div class="splide__track">
+      <ul class="splide__list">
+        {
+          images.map((item) => (
+            <li class="splide__slide">
+              <Image
+                src={item.url}
+                width={120}
+                height={60}
+                aspectRatio="2:1"
+                format="avif"
+                alt={item.alt}
+              />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { Splide } from "@splidejs/splide";
+  import "@splidejs/splide/css";
+  import "@splidejs/splide/css/core";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const main = new Splide("#main-carousel", {
+      type: "fade",
+      rewind: true,
+      pagination: false,
+      lazyLoad: true,
+    });
+
+    const thumbnails = new Splide("#thumbnail-carousel", {
+      fixedWidth: 120,
+      fixedHeight: 60,
+      gap: 10,
+      rewind: false,
+      pagination: false,
+      isNavigation: true,
+    });
+
+    main.sync(thumbnails);
+    main.mount();
+    thumbnails.mount();
+  });
+</script>

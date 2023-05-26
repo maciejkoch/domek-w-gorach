@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@astrojs/image": "^0.16.7",
+    "@splidejs/splide": "^4.1.4",
     "astro": "^2.4.1",
     "astro-icon": "^0.8.0",
     "sass": "^1.62.1",

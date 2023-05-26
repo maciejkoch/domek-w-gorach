@@ -6,17 +6,20 @@ import Hero from "../components/hero/Hero.astro";
 import Carousel from "../components/Carousel.astro";
 
 import { Content as DescriptionContent } from "../content/description.md";
+import Gallery from "../components/gallery/Gallery.astro";
 ---
 
 <Layout title="Witaj w domku w górach">
   <main>
     <Hero />
 
-    <div class="text">
+    <div class="text container">
       <DescriptionContent />
     </div>
 
-    <Carousel />
+    <!-- <Carousel /> -->
+
+    <Gallery />
   </main>
 </Layout>
 
