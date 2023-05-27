@@ -51,12 +51,8 @@ const { title } = Astro.props;
   html {
     @include reset();
 
-    font-family: system-ui, sans-serif;
-    background-color: #f6f6f6;
-  }
-  code {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-height);
   }
 
   .container {
@@ -69,12 +65,23 @@ const { title } = Astro.props;
     }
   }
 
+  .section {
+    padding: 40px 0;
+
+    &--with-background {
+      background-color: var(--dark-background-color);
+      color: var(--light-font-color);
+    }
+  }
+
+  .text {
+    h2 {
+      font-size: 25px;
+    }
+  }
+
   [astro-icon] {
     width: 40px;
     height: 40px;
-  }
-
-  a {
-    text-decoration: none;
   }
 </style>

@@ -5,11 +5,11 @@ import { Sprite } from "astro-icon";
 const items = [
   {
     name: "Poznaj nas",
-    link: "#header",
+    link: "#aboutUs",
   },
   {
     name: "Galeria",
-    link: "#hero",
+    link: "#gallery",
   },
   {
     name: "Oferta",
@@ -26,16 +26,22 @@ const items = [
 ];
 ---
 
-<header class="header" id="header">
+<header class="header">
   <div class="header__container container">
     <div class="logo">
-      <a class="link" href="./index.html">
+      <a class="link" href="#hero">
         <Sprite class="logo-icon" name="icomoon-free:home" />
       </a>
     </div>
     <nav class="navigation">
       <ul class="navigation__list">
-        {items.map((item) => <li class="navigation__item">{item.name}</li>)}
+        {
+          items.map((item) => (
+            <li class="navigation__item">
+              <a href={item.link}>{item.name}</a>
+            </li>
+          ))
+        }
       </ul>
     </nav>
     <div class="media-links-container">

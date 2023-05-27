@@ -2,7 +2,7 @@
 import "./gallery.scss";
 
 import { Image } from "@astrojs/image/components";
-import images from "../../data/gallery.json";
+import images from "../../content/gallery.json";
 
 const ariaLabel = "Gallery of images";
 const thumbnailAriaLabel = "Thumbnail gallery of images";
@@ -51,30 +51,4 @@ const thumbnailAriaLabel = "Thumbnail gallery of images";
   </div>
 </section>
 
-<script>
-  import { Splide } from "@splidejs/splide";
-  import "@splidejs/splide/css";
-  import "@splidejs/splide/css/core";
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const main = new Splide("#main-carousel", {
-      type: "fade",
-      rewind: true,
-      pagination: false,
-      lazyLoad: true,
-    });
-
-    const thumbnails = new Splide("#thumbnail-carousel", {
-      fixedWidth: 120,
-      fixedHeight: 60,
-      gap: 10,
-      rewind: false,
-      pagination: false,
-      isNavigation: true,
-    });
-
-    main.sync(thumbnails);
-    main.mount();
-    thumbnails.mount();
-  });
-</script>
+<script src="./gallery.ts"></script>

@@ -1,0 +1,15 @@
+@import "../../styles/breakpoints.scss";
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include device(tablet) {
+    flex-direction: row;
+  }
+
+  * {
+    flex: 1;
+  }
+}

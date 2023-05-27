@@ -1,0 +1,20 @@
+---
+import "./about-us.scss";
+
+import { Content as AboutUsContent } from "../../content/about-us.md";
+import { Image } from "@astrojs/image/components";
+---
+
+<div class="about-us container">
+  <div class="about-us__text text"><AboutUsContent /></div>
+  <div class="about-us__image">
+    <Image
+      src="https://cdn.myportfolio.com/b3fe62566479a057866dde0c69a5774e/8481c521-c0be-4950-9daa-2a0a66c246a3_rw_1920.png?h=b4c19e9978a3b538c090b1d0545896fb"
+      width={600}
+      height={600}
+      aspectRatio="1:1"
+      format="avif"
+      alt="O nas"
+    />
+  </div>
+</div>

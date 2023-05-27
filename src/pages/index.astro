@@ -4,22 +4,20 @@ import { getEntryBySlug } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/hero/Hero.astro";
 import Carousel from "../components/Carousel.astro";
-
-import { Content as DescriptionContent } from "../content/description.md";
 import Gallery from "../components/gallery/Gallery.astro";
+import AboutUs from "../components/aboutUs/AboutUs.astro";
 ---
 
-<Layout title="Witaj w domku w górach">
+<Layout title="Witaj w domku na granicy">
   <main>
     <Hero />
 
-    <div class="text container">
-      <DescriptionContent />
+    <div id="aboutUs" class="section section--with-background">
+      <AboutUs />
     </div>
-
-    <!-- <Carousel /> -->
-
-    <Gallery />
+    <div id="gallery" class="section">
+      <Gallery />
+    </div>
   </main>
 </Layout>
 
