@@ -5,11 +5,20 @@
   flex-direction: column;
   gap: 40px;
 
-  @include device(tablet) {
-    flex-direction: row;
+  text-align: center;
+
+  h2 {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 20px;
   }
 
-  * {
-    flex: 1;
+  p {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  img {
+    max-width: 300px;
   }
 }

@@ -3,3 +3,12 @@
 U nas wypoczniesz, odpoczniesz i poodpoczywasz!
 
 Nasz domek znajduje się dokładnie na granicy dwóch województw, Śląska oraz Małopolski
+
+&nbsp;
+&nbsp;
+
+## Ciesz się spokojem oraz bliskością natury
+
+U nas wypoczniesz, odpoczniesz i poodpoczywasz!
+
+Nasz domek znajduje się dokładnie na granicy dwóch województw, Śląska oraz Małopolski
