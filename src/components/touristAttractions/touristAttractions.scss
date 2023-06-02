@@ -1,0 +1,11 @@
+@import "../../styles/breakpoints.scss";
+
+.attractions {
+  display: flex;
+
+  gap: 20px;
+
+  &__box {
+    border: 1px solid black;
+  }
+}

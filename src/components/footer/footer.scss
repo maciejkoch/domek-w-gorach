@@ -1,15 +1,27 @@
 @import "../../styles/breakpoints.scss";
 
 .footer {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px;
+  position: relative;
 
-  @include device(tablet) {
-    flex-direction: row;
-    align-items: flex-start;
+  &__logo {
+    position: absolute;
+    top: 244px;
+    left: 50%;
+    margin-left: -19px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+
+    @include device(tablet) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
   }
 
   h2 {
@@ -20,6 +32,9 @@
   &__text {
     line-height: 1.5;
     color: var(--dark-background-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   &__location-link {
@@ -42,6 +57,39 @@
     @include device(tablet) {
       align-items: flex-start;
     }
+  }
+
+  &__bottom {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+
+    &::after {
+      content: "";
+      top: 0;
+      right: 0;
+      width: calc(50% - 36px);
+      height: 1px;
+      background-color: var(--dark-background-color);
+    }
+
+    &::before {
+      content: "";
+      top: 0;
+      right: 0;
+      width: calc(50% - 36px);
+      height: 1px;
+      background-color: var(--dark-background-color);
+    }
+  }
+
+  &__authors {
+    padding: 0 40px 20px 10px;
+  }
+
+  &__authors-text {
+    text-align: end;
   }
 }
 

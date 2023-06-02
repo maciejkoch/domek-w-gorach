@@ -10,42 +10,56 @@ const address = {
 
 const contact = {
   contactHeader: "Kontakt",
-  telLabel: "tel.",
+  telLabel: "tel. ",
   telHref: "tel:+48 505 505 505",
   telValue: "505 505 505",
-  mailLabel: "e-mail:",
+  mailLabel: "e-mail: ",
   mailHref: "mailto:domkinagranicy@gmail.com",
   mailValue: "domkinagranicy@gmail.com",
 };
 ---
 
 <footer id="contact" class="footer section--with-light-background">
-  <div class="footer__container">
-    <h2>{address.locationHeader}</h2>
-    <p class="footer__text">{address.street}</p>
-    <p class="footer__text">{address.city}</p>
-    <a class="footer__text footer__location-link" href={address.mapLink}
-      >{address.mapHeader}</a
-    >
-  </div>
-  <div class="footer__container">
-    <h2>{contact.contactHeader}</h2>
-    <p class="footer__text">
-      <span>{contact.telLabel}</span>
-      <a href={contact.telHref}>{contact.telValue}</a>
-    </p>
-    <p class="footer__text">
-      <span>{contact.mailLabel}</span>
-      <a href={contact.mailHref}>{contact.mailValue}</a>
-    </p>
-  </div>
+  <div class="footer__top">
+    <div class="footer__container">
+      <h2>{address.locationHeader}</h2>
+      <p class="footer__text">{address.street}</p>
+      <p class="footer__text">{address.city}</p>
+      <a class="footer__text footer__location-link" href={address.mapLink}
+        >{address.mapHeader}</a
+      >
+    </div>
+    <div class="footer__container">
+      <h2>{contact.contactHeader}</h2>
+      <p class="footer__text">
+        <span>{contact.telLabel}</span>
+        <a href={contact.telHref}>{contact.telValue}</a>
+      </p>
+      <p class="footer__text">
+        <span>{contact.mailLabel}</span>
+        <a href={contact.mailHref}>{contact.mailValue}</a>
+      </p>
+    </div>
 
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12571.629685765105!2d24.3052637!3d38.0259377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a22d4ff0c3a3f1%3A0xde71fabede89fe5c!2sZastani%20beach!5e0!3m2!1spl!2spl!4v1685607056206!5m2!1spl!2spl"
-    width="600"
-    height="450"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12571.629685765105!2d24.3052637!3d38.0259377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a22d4ff0c3a3f1%3A0xde71fabede89fe5c!2sZastani%20beach!5e0!3m2!1spl!2spl!4v1685607056206!5m2!1spl!2spl"
+      max-width="320"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <div class="footer__bottom">
+    <svg
+      class="footer__logo"
+      width="30"
+      height="30"
+      astro-icon="icomoon-free:home"
+    >
+      <use xlink:href="#astroicon:icomoon-free:home"></use>
+    </svg>
+  </div>
+  <div class="footer__authors">
+    <p class="footer__authors-text">Created by Us</p>
+  </div>
 </footer>
