@@ -4,6 +4,10 @@
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+
+  @include device(tablet) {
+    flex-wrap: nowrap;
+  }
 }
 
 .element {
