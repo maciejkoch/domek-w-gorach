@@ -1,8 +1,64 @@
 ---
 import "./touristAttractions.scss";
+const elements = [
+  {
+    name: "Park Etnograficzny Ziemi Żywieckiej",
+    imageURL:
+      "https://beskidy.travel/Media/Default/.MainStorage/ContentItemDocumentTypeRecord/1cct4y4k.3h0/file1.jpg",
+    imageAlt: "Old house",
+    description: `Żywiecki Park Etnograficzny w Ślemieniu jest najmłodszym muzeum typu skansenowego w Polsce i trzecim w Województwie Śląskim.
+Odwzorowuje on układ urbanistyczny i zabudowę wsi Beskidu Żywieckiego. 
+Na obszarze ponad 6 ha posadowionych zostało już 19 zabytkowych obiektów architektury.`,
+  },
+  {
+    name: "Park Etnograficzny Ziemi Żywieckiej",
+    imageURL:
+      "https://beskidy.travel/Media/Default/.MainStorage/ContentItemDocumentTypeRecord/1cct4y4k.3h0/file1.jpg",
+    imageAlt: "Old house",
+    description: `Żywiecki Park Etnograficzny w Ślemieniu jest najmłodszym muzeum typu skansenowego w Polsce i trzecim w Województwie Śląskim.
+Odwzorowuje on układ urbanistyczny i zabudowę wsi Beskidu Żywieckiego. 
+Na obszarze ponad 6 ha posadowionych zostało już 19 zabytkowych obiektów architektury.`,
+  },
+  {
+    name: "Park Etnograficzny Ziemi Żywieckiej",
+    imageURL:
+      "https://beskidy.travel/Media/Default/.MainStorage/ContentItemDocumentTypeRecord/1cct4y4k.3h0/file1.jpg",
+    imageAlt: "Old house",
+    description: `Żywiecki Park Etnograficzny w Ślemieniu jest najmłodszym muzeum typu skansenowego w Polsce i trzecim w Województwie Śląskim.
+Odwzorowuje on układ urbanistyczny i zabudowę wsi Beskidu Żywieckiego. 
+Na obszarze ponad 6 ha posadowionych zostało już 19 zabytkowych obiektów architektury.`,
+  },
+];
 ---
 
-<div class="attractions container">
+<ul class="attractions container">
+  {
+    elements.map((element) => (
+      <li class="element">
+        <figure>
+          <div class="element__image">
+            <img
+              class="image"
+              src={element.imageURL}
+              alt={element.imageAlt}
+              width="370"
+              height="294"
+            />
+            <div class="element__overlay">
+              <p class="element__overlay-text">{element.description}</p>
+            </div>
+          </div>
+          <figcaption class="element__textbox">
+            <h3 class="element__name">{element.name}</h3>
+            <p class="element__link">Więcej...</p>
+          </figcaption>
+        </figure>
+      </li>
+    ))
+  }
+</ul>
+
+<!-- <div class="attractions container">
   <div class="attractions__box">
     <img
       alt="O nas"
@@ -33,4 +89,4 @@ import "./touristAttractions.scss";
       decoding="async"
     />
   </div>
-</div>
+</div> -->
