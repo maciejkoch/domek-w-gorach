@@ -55,6 +55,7 @@
   cursor: pointer;
   border: none;
   outline: none;
+  color: var(--dark-background-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @include device(desktop) {
@@ -70,9 +71,7 @@
   cursor: pointer;
   border: none;
   outline: none;
-  // fill: black;
-  // width: 14px;
-  // height: 14px;
+  color: var(--light-font-color);
 
   @include device(desktop) {
     display: none;
