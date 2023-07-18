@@ -1,22 +1,66 @@
 [
   {
-    "url": "./src/images-and-icons/20230707_210606.jpg",
+    "url": "./src/images-and-icons/domek-wejście.jpg",
     "alt": "Góry"
   },
   {
-    "url": "https://1.bp.blogspot.com/-O5dxPSw-z5I/T56EjjoMYnI/AAAAAAAAHr0/XNInjmUb1L4/s1600/100_1187.JPG",
+    "url": "./src/images-and-icons/kuchnia.jpg",
     "alt": "Góry"
   },
   {
-    "url": "https://apartamentyzakopane.pl/blog/wp-content/uploads/2020/10/20120830_AB3_9443.jpg",
+    "url": "./src/images-and-icons/kuchnia-detal.jpg",
     "alt": "Góry"
   },
   {
-    "url": "https://climb2change.pl/wp-content/uploads/2017/02/climb2change-o-czym-pamietac-zima-w-gorach.jpg",
+    "url": "./src/images-and-icons/kuchnia-detal2.jpg",
     "alt": "Góry"
   },
   {
-    "url": "https://api.kopalnia.pl/storage/2020/3/375px_kopalnia-wiedzy-gdzie-w-gory-na-weekend-2-kopalnia-soli-wieliczka-700x465.jpg",
-    "alt": "Góry 2"
+    "url": "./src/images-and-icons/salon-jadalnia.jpg",
+    "alt": "Góry"
+  },
+  {
+    "url": "./src/images-and-icons/salon.jpg",
+    "alt": "Góry"
+  },
+  {
+    "url": "./src/images-and-icons/schody.jpg",
+    "alt": "Góry"
+  },
+  {
+    "url": "./src/images-and-icons/sypialnia.jpg",
+    "alt": "Góry"
+  },
+  {
+    "url": "./src/images-and-icons/taras.jpg",
+    "alt": "Góry"
+  },
+  {
+    "url": "./src/images-and-icons/widok.jpg",
+    "alt": "Góry"
+  },
+  {
+    "url": "./src/images-and-icons/ogrod.jpg",
+    "alt": "Góry"
+  },
+  {
+    "url": "./src/images-and-icons/lazienka1.jpg",
+    "alt": "Góry"
+  },
+  {
+    "url": "./src/images-and-icons/lazienka2.jpg",
+    "alt": "Góry"
+  },
+  {
+    "url": "./src/images-and-icons/lazienka3.jpg",
+    "alt": "Góry"
+  },
+  {
+    "url": "./src/images-and-icons/okolica-zima.jpg",
+    "alt": "Góry"
+  },
+  {
+    "url": "./src/images-and-icons/hero.jpg",
+    "alt": "Góry"
   }
 ]

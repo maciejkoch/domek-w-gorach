@@ -1,5 +1,6 @@
 ---
 import "./touristAttractions.scss";
+import { Content as TouristAttractions } from "../../content/whatToSee.md";
 const elements = [
   {
     name: "Park Etnograficzny Ziemi Żywieckiej",
@@ -11,49 +12,47 @@ Odwzorowuje on układ urbanistyczny i zabudowę wsi Beskidu Żywieckiego.
 Na obszarze ponad 6 ha posadowionych zostało już 19 zabytkowych obiektów architektury.`,
   },
   {
-    name: "Park Etnograficzny Ziemi Żywieckiej",
-    imageURL:
-      "https://beskidy.travel/Media/Default/.MainStorage/ContentItemDocumentTypeRecord/1cct4y4k.3h0/file1.jpg",
-    imageAlt: "Old house",
-    description: `Żywiecki Park Etnograficzny w Ślemieniu jest najmłodszym muzeum typu skansenowego w Polsce i trzecim w Województwie Śląskim.
-Odwzorowuje on układ urbanistyczny i zabudowę wsi Beskidu Żywieckiego. 
-Na obszarze ponad 6 ha posadowionych zostało już 19 zabytkowych obiektów architektury.`,
+    name: "Renesansowy zamek w Suchej Beskidzkiej",
+    imageURL: "https://www.trasadlabobasa.pl/image/11641",
+    imageAlt: "Castle",
+    description: `Zamek w Suchej Beskidzkiej – magnacka rezydencja kolejnych właścicieli dóbr suskich: Castiglione-Suskich, Komorowskich, Wielopolskich, Branickich i Tarnowskich. Nazywany „Małym Wawelem” ze względu na podobieństwo do krakowskiego zamku królewskiego.`,
   },
   {
-    name: "Park Etnograficzny Ziemi Żywieckiej",
+    name: "Muzeum Browaru Żywiec",
     imageURL:
-      "https://beskidy.travel/Media/Default/.MainStorage/ContentItemDocumentTypeRecord/1cct4y4k.3h0/file1.jpg",
+      "https://muzeumbrowaru.pl/uploads/oryginal/082016/31/89af97e874_browar12.png",
     imageAlt: "Old house",
-    description: `Żywiecki Park Etnograficzny w Ślemieniu jest najmłodszym muzeum typu skansenowego w Polsce i trzecim w Województwie Śląskim.
-Odwzorowuje on układ urbanistyczny i zabudowę wsi Beskidu Żywieckiego. 
-Na obszarze ponad 6 ha posadowionych zostało już 19 zabytkowych obiektów architektury.`,
+    description: `Browar żywiecki założony w 1856 r. przez arcyksięcia Albrechta Fryderyka Habsburga, to jeden z najbardziej znanych browarów w Europie. 150 lat później w jego najstarszej, historycznej części swe podwoje otworzyło arcyciekawe muzeum…`,
   },
 ];
 ---
 
-<ul class="attractions container">
-  {
-    elements.map((element) => (
-      <li class="element">
-        <figure>
-          <div class="element__image">
-            <img
-              class="image"
-              src={element.imageURL}
-              alt={element.imageAlt}
-              width="370"
-              height="294"
-            />
-            <div class="element__overlay">
-              <p class="element__overlay-text">{element.description}</p>
+<div>
+  <ul class="attractions container">
+    {
+      elements.map((element) => (
+        <li class="element">
+          <figure>
+            <div class="element__image">
+              <img
+                class="image"
+                src={element.imageURL}
+                alt={element.imageAlt}
+                width="370"
+                height="294"
+              />
+              <div class="element__overlay">
+                <p class="element__overlay-text">{element.description}</p>
+              </div>
             </div>
-          </div>
-          <figcaption class="element__textbox">
-            <h3 class="element__name">{element.name}</h3>
-            <p class="element__link">Więcej...</p>
-          </figcaption>
-        </figure>
-      </li>
-    ))
-  }
-</ul>
+            <figcaption class="element__textbox">
+              <h3 class="element__name">{element.name}</h3>
+              <p class="element__link">Więcej...</p>
+            </figcaption>
+          </figure>
+        </li>
+      ))
+    }
+  </ul>
+  <div class="whatToSee__text"><TouristAttractions /></div>
+</div>

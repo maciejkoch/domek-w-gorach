@@ -1,5 +1,3 @@
 ## Komfortowy odpoczynek w zaciszu gór
 
-U nas wypoczniesz, odpoczniesz i poodpoczywasz!
-
-W naszej ofercie mamy dla Państwa przytulny i wygodnie urządzony dom dla 8 gości. Oferujemy bezpłatne WiFi oraz prywatny parking. Goście mogą podziwiać widok na góry i las. W domu wakacyjnym zapewniono taras, dwie sypialnie, salon z telewizorem, kuchnię ze standardowym wyposażeniem, takim jak lodówka i piekarnik, a także łazienkę z prysznicem. Zapewniamy ręczniki i pościel.
+W naszej ofercie mamy dla Państwa przytulny i wygodnie urządzony dom dla 2 do 6 osób. Oferujemy bezpłatne WiFi, telewizor, elektryczny kominek z funkcją grzania oraz elektryczne ogrzewanie podłogowe. Goście mogą podziwiać widok na góry i las. Domek posiada dwie sypialnie, w tym 4 pojedyńcze łóżka, salon z telewizorem i rozkładaną sofą, kuchnię ze standardowym wyposażeniem takim jak ekspres do kawy, mikrofalówka, czajnik, lodówka, płyta indukcyjna oraz zastawa stołowa dla 6 osób. Na wyposażeniu łazienki z prysznicem dostępna jest suszarka do włosów oraz rozkładana suszarka na pranie. W domu wakacyjnym zapewniamy zadaszony taras (otwierany żagiel) z jadalnią na świeżym powietrzu oraz miejscem na grilla. Zapewniamy pościel (ręczniki we własnym zakresie) oraz miejsca parkingowe w ogrodzonej i monitorowanej posesji o powierzchni 800m2.
