@@ -70,17 +70,25 @@
 .whatToSee__text {
   display: flex;
   flex-direction: column;
+  color: var(--dark-background-color);
   // text-align: center;
 
   h2 {
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 500;
     margin: 20px auto 20px;
   }
 
-  p {
-    font-size: 20px;
-    margin-bottom: 10px;
+  ul {
+    padding: 10px;
+    background-color: var(--dark-background-color);
+  }
+
+  li {
+    color: var(--light-font-color);
+    font-size: 22px;
     line-height: 1.5;
+    list-style: circle;
+    margin-left: 30px;
   }
 }
