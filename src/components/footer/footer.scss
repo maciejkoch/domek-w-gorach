@@ -85,11 +85,15 @@
   }
 
   &__authors {
-    padding: 0 40px 20px 10px;
+    padding: 0px 40px 20px;
   }
 
   &__authors-text {
-    text-align: end;
+    text-align: center;
+
+    @include device(tablet) {
+      text-align: end;
+    }
   }
 }
 
