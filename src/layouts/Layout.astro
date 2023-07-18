@@ -1,8 +1,9 @@
 ---
-import { Sprite } from "astro-icon";
+import { Sprite } from 'astro-icon';
 
-import Header from "../components/header/Header.astro";
-import Footer from "../components/footer/Footer.astro";
+import Header from '../components/header/Header.astro';
+import Footer from '../components/footer/Footer.astro';
+import Analytics from '../components/analytics/Analytics.astro';
 
 export interface Props {
   title: string;
@@ -19,6 +20,8 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+
+    <Analytics />
   </head>
   <body>
     <Sprite.Provider>
@@ -26,65 +29,65 @@ const { title } = Astro.props;
       <slot />
       <Footer />
     </Sprite.Provider>
+    <style lang="scss" is:global>
+      @import '../styles/reset.scss';
+      @import '../styles/breakpoints.scss';
+
+      :root {
+        --primary-font-family: Graphik, sans-serif;
+        --secondary-font-family: Ivar Display Condensed, serif;
+        --accent: 124, 58, 237;
+        --dark-background-color: #7f6a52;
+        --light-font-color: #eae7dd;
+        --accent-gradient: linear-gradient(
+          45deg,
+          rgb(var(--accent)),
+          #da62c4 30%,
+          white 60%
+        );
+
+        --header-height: 62px;
+      }
+
+      html {
+        @include reset();
+
+        scroll-behavior: smooth;
+        scroll-padding-top: var(--header-height);
+
+        * {
+          box-sizing: border-box;
+        }
+      }
+
+      .container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 10px;
+
+        @include device(desktop) {
+          max-width: 1280px;
+        }
+      }
+
+      .section {
+        padding: 40px 0;
+
+        &--with-dark-background {
+          background-color: var(--dark-background-color);
+          color: var(--light-font-color);
+        }
+
+        &--with-light-background {
+          background-color: var(--light-font-color);
+          color: var(--dark-background-color);
+        }
+      }
+
+      [astro-icon] {
+        width: 40px;
+        height: 40px;
+      }
+    </style>
   </body>
 </html>
-<style lang="scss" is:global>
-  @import "../styles/reset.scss";
-  @import "../styles/breakpoints.scss";
-
-  :root {
-    --primary-font-family: Graphik, sans-serif;
-    --secondary-font-family: Ivar Display Condensed, serif;
-    --accent: 124, 58, 237;
-    --dark-background-color: #7f6a52;
-    --light-font-color: #eae7dd;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      #da62c4 30%,
-      white 60%
-    );
-
-    --header-height: 62px;
-  }
-
-  html {
-    @include reset();
-
-    scroll-behavior: smooth;
-    scroll-padding-top: var(--header-height);
-
-    * {
-      box-sizing: border-box;
-    }
-  }
-
-  .container {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 10px;
-
-    @include device(desktop) {
-      max-width: 1280px;
-    }
-  }
-
-  .section {
-    padding: 40px 0;
-
-    &--with-dark-background {
-      background-color: var(--dark-background-color);
-      color: var(--light-font-color);
-    }
-
-    &--with-light-background {
-      background-color: var(--light-font-color);
-      color: var(--dark-background-color);
-    }
-  }
-
-  [astro-icon] {
-    width: 40px;
-    height: 40px;
-  }
-</style>
