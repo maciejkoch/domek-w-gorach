@@ -17,7 +17,7 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 
 # Icons
 
-Select the icon from [Icones](https://icones.js.org/) and use:
+Select the icon from [Icones](https://iciicomones.js.org/) and use:
 
 ```html
 <Sprite name="mdi:phone" />
