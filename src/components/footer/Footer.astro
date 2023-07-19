@@ -6,6 +6,8 @@ const address = {
   city: "34-323 Kocoń",
   mapHeader: "Zobacz lokalizację",
   mapLink: "https://goo.gl/maps/dpea1zRJBmDUNT129",
+  embeddedMapLink:
+    "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2579.7288122342206!2d19.418092315704943!3d49.7159069793809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDnCsDQyJzU3LjMiTiAxOcKwMjUnMTMuMCJF!5e0!3m2!1spl!2spl!4v1689707772999!5m2!1spl!2spl",
 };
 
 const contact = {
@@ -41,7 +43,7 @@ const contact = {
       </p>
     </div>
     <iframe
-      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2579.7288122342206!2d19.418092315704943!3d49.7159069793809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDnCsDQyJzU3LjMiTiAxOcKwMjUnMTMuMCJF!5e0!3m2!1spl!2spl!4v1689707772999!5m2!1spl!2spl"
+      src={address.embeddedMapLink}
       max-width="320"
       style="border:0;"
       allowfullscreen=""
@@ -49,14 +51,13 @@ const contact = {
       referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
   <div class="footer__bottom">
-    <svg
-      class="footer__logo"
-      width="30"
-      height="30"
-      astro-icon="icomoon-free:home"
-    >
-      <use xlink:href="#astroicon:icomoon-free:home"></use>
-    </svg>
+    <a class="link" href="#hero">
+      <img
+        class="footer__logo"
+        src="./src/images-and-icons/logo-color.png"
+        alt="page logo"
+      />
+    </a>
   </div>
   <div class="footer__authors">
     <p class="footer__authors-text">Created by Sandra Koch</p>

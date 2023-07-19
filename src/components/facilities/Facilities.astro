@@ -1,0 +1,124 @@
+---
+import "./facilities.scss";
+import { Sprite } from "astro-icon";
+
+const columns = [
+  [
+    {
+      title: "Salon",
+      items: [
+        { icon: "mdi:sofa-outline", text: "rozkładana sofa" },
+        {
+          icon: "mdi:fireplace",
+          text: "elektryczny kominek z funkcją grzania",
+        },
+        { icon: "mdi:television", text: "telewizor" },
+        { icon: "mdi:table-chair", text: "część jadalna" },
+        { icon: "mdi:sofa", text: "część wypoczynkowa" },
+      ],
+    },
+    {
+      title: "2 Sypialnie",
+      items: [
+        { icon: "mdi:bed", text: "4 pojedyńcze łóżka" },
+        { icon: "material-symbols:bed-outline-rounded", text: "pościel" },
+      ],
+    },
+    {
+      title: "Łazienka",
+      items: [
+        { icon: "mdi:shower-head", text: "prysznic" },
+        { icon: "mdi:hair-dryer-outline", text: "suszarka do włosów" },
+        { icon: "solar:hanger-bold", text: "suszarka na pranie" },
+      ],
+    },
+  ],
+  [
+    {
+      title: "Kuchnia",
+      items: [
+        { icon: "mdi:coffee-maker-outline", text: "ekspres do kawy" },
+        { icon: "mdi:microwave", text: "mikrofalówka" },
+        { icon: "mdi:kettle-steam-outline", text: "czajnik" },
+        { icon: "mdi:fridge-industrial-outline", text: "lodówka" },
+        { icon: "mdi:iron-outline", text: "płyta indukcyjna" },
+        { icon: "mdi:silverware-fork-knife", text: "zastawa stołowa (6 osób)" },
+        { icon: "mdi:pot-steam-outline", text: "przybory kuchenne, garnki" },
+        { icon: "mdi:hand-wash-outline", text: "środki czystości" },
+      ],
+    },
+    {
+      title: "Taras",
+      items: [
+        { icon: "mdi:umbrella-beach-outline", text: "zadaszenie (żagiel)" },
+        {
+          icon: "material-symbols:table-bar-outline",
+          text: "stół + 6 krzeseł",
+        },
+        { icon: "mdi:grill-outline", text: "grill" },
+      ],
+    },
+  ],
+  [
+    {
+      title: "Różne",
+      items: [
+        { icon: "mdi:wifi-arrow-left-right", text: "bezpłatne Wi-Fi" },
+        { icon: "mdi:parking", text: "prywatny parking" },
+        { icon: "mdi:hanger", text: "wieszak w przedpokoju" },
+        { icon: "mdi:heating-coil", text: "elektryczne ogrzewanie podłogowe" },
+      ],
+    },
+    {
+      title: "Okolica",
+      items: [
+        { icon: "mdi:weather-night", text: "strefa ciemnego nieba" },
+        {
+          icon: "ic:outline-forest",
+          text: "widok na góry i las",
+        },
+        {
+          icon: "mdi:fence",
+          text: "ogrodzona posesja o powierzchni 800m2",
+        },
+        {
+          icon: "mdi:bicycle",
+          text: "możliwość wycieczek pieszych i rowerowych",
+        },
+        {
+          icon: "mdi:hiking",
+          text: "okoliczne lasy obfitujące w liczne gatunki grzybów",
+        },
+        {
+          icon: "mdi:fish",
+          text: "łowiska na jeziorze dla wielbicieli wędkowania",
+        },
+      ],
+    },
+  ],
+];
+---
+
+<div class="facilities container">
+  {
+    columns.map((column) => (
+      <div class="facilities__column">
+        {column.map((category) => (
+          <div>
+            <h3 class="facilities__category-title">{category.title}</h3>
+            <ul class="facilities__category-list">
+              {category.items.map((item) => (
+                <li class="facilities__item">
+                  <span>
+                    <Sprite class="facilities__item-icon" name={item.icon} />
+                  </span>
+                  {item.text}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    ))
+  }
+</div>

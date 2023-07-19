@@ -13,11 +13,12 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-left: 20px;
   }
 }
 
-.logo-icon {
-  color: var(--dark-background-color);
+.logo {
+  max-width: 150px;
 }
 
 .media-icon {
@@ -36,7 +37,7 @@
       display: flex;
     }
     &__item {
-      padding: 0 25px;
+      padding: 0 20px;
       color: var(--dark-background-color);
       font-size: 20px;
     }
