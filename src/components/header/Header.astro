@@ -1,27 +1,27 @@
 ---
-import './header.scss';
-import { Sprite } from 'astro-icon';
+import "./header.scss";
+import { Sprite } from "astro-icon";
 
 const items = [
   {
-    name: 'Poznaj nas',
-    link: '#aboutUs',
+    name: "Poznaj nas",
+    link: "#aboutUs",
   },
   {
-    name: 'Galeria',
-    link: '#gallery',
+    name: "Galeria",
+    link: "#gallery",
   },
   {
-    name: 'Oferta',
-    link: '#ourOffer',
+    name: "Oferta",
+    link: "#ourOffer",
   },
   {
-    name: 'Atrakcje w pobliżu',
-    link: '#touristAttractions',
+    name: "Atrakcje w pobliżu",
+    link: "#touristAttractions",
   },
   {
-    name: 'Kontakt',
-    link: '#contact',
+    name: "Kontakt",
+    link: "#contact",
   },
 ];
 ---
@@ -69,28 +69,49 @@ const items = [
     <button class="mobile-menu-closing-icon js-close-menu">
       <Sprite name="mdi:close" />
     </button>
-    <div class="mobile-menu">
-      <ul>
-        {
-          items.map((item) => (
-            <li class="mobile-menu__item">
-              <a
-                class="mobile-menu__link mobile-menu__link--active js-close-menu"
-                href={item.link}
-              >
-                {item.name}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
 
-      <div class="mobile-menu__media-links-container">
-        <a class="mobile-menu__media-link" href="./index.html">
-          <Sprite class="mobile-menu__media-icon" name="tabler:brand-booking" />
-        </a>
-        <a class="mobile-menu__media-link" href="./index.html">
-          <Sprite class="mobile-menu__media-icon" name="ic:baseline-facebook" />
+    <div class="mobile-wrap">
+      <div>
+        <div class="mobile-menu">
+          <ul>
+            {
+              items.map((item) => (
+                <li class="mobile-menu__item">
+                  <a
+                    class="mobile-menu__link mobile-menu__link--active js-close-menu"
+                    href={item.link}
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+
+          <div class="mobile-menu__media-links-container">
+            <a class="mobile-menu__media-link" href="./index.html">
+              <Sprite
+                class="mobile-menu__media-icon"
+                name="tabler:brand-booking"
+              />
+            </a>
+            <a class="mobile-menu__media-link" href="./index.html">
+              <Sprite
+                class="mobile-menu__media-icon"
+                name="ic:baseline-facebook"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-menu__logo-wrap">
+        <a href="#hero">
+          <img
+            class="mobile-menu__logo"
+            src="/images/logo-color.png"
+            alt="page logo"
+          />
         </a>
       </div>
     </div>
