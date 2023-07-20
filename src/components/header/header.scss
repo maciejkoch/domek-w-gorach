@@ -22,12 +22,13 @@
 }
 
 .media-icon {
-  color: var(--dark-background-color);
+  color: var(--dark-font-color);
 }
 
 .navigation {
   width: 100%;
   display: none;
+  margin-left: 100px;
 
   @include device(desktop) {
     display: flex;
@@ -38,14 +39,18 @@
     }
     &__item {
       padding: 0 20px;
-      color: var(--dark-background-color);
-      font-size: 20px;
+      color: var(--dark-font-color);
+      font-size: 19px;
+      font-weight: 500;
     }
   }
 }
 
 .media-links-container {
-  display: flex;
+  display: none;
+  @include device(desktop) {
+    display: flex;
+  }
 }
 
 .mobile-menu-burger {
@@ -56,7 +61,7 @@
   cursor: pointer;
   border: none;
   outline: none;
-  color: var(--dark-background-color);
+  color: var(--dark-font-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @include device(desktop) {
@@ -98,8 +103,8 @@
 
   & .mobile-menu-closing-icon {
     position: absolute;
-    top: 23px;
-    right: 32px;
+    top: 10px;
+    right: 6px;
     background-color: transparent;
     stroke: var(--color-primary-light);
   }
@@ -126,5 +131,15 @@
     text-decoration: none;
     transform: none;
     transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s;
+  }
+
+  &__media-links-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+  }
+
+  &__media-icon {
+    color: var(--light-font-color);
   }
 }
