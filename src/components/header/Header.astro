@@ -44,6 +44,7 @@ const items = [
         }
       </ul>
     </nav>
+
     <div class="media-links-container">
       <a class="link" href="./index.html">
         <Sprite class="media-icon" name="tabler:brand-booking" />
@@ -52,6 +53,7 @@ const items = [
         <Sprite class="media-icon" name="ic:baseline-facebook" />
       </a>
     </div>
+
     <div class="header__mobile-switch">
       <button
         class="mobile-menu-burger js-open-menu"
@@ -67,21 +69,31 @@ const items = [
     <button class="mobile-menu-closing-icon js-close-menu">
       <Sprite name="mdi:close" />
     </button>
+    <div class="mobile-menu">
+      <ul>
+        {
+          items.map((item) => (
+            <li class="mobile-menu__item">
+              <a
+                class="mobile-menu__link mobile-menu__link--active js-close-menu"
+                href={item.link}
+              >
+                {item.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
 
-    <ul class="mobile-menu">
-      {
-        items.map((item) => (
-          <li class="mobile-menu__item">
-            <a
-              class="mobile-menu__link mobile-menu__link--active js-close-menu"
-              href={item.link}
-            >
-              {item.name}
-            </a>
-          </li>
-        ))
-      }
-    </ul>
+      <div class="mobile-menu__media-links-container">
+        <a class="mobile-menu__media-link" href="./index.html">
+          <Sprite class="mobile-menu__media-icon" name="tabler:brand-booking" />
+        </a>
+        <a class="mobile-menu__media-link" href="./index.html">
+          <Sprite class="mobile-menu__media-icon" name="ic:baseline-facebook" />
+        </a>
+      </div>
+    </div>
   </div>
 </header>
 

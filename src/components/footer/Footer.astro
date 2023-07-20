@@ -2,7 +2,7 @@
 import "./footer.scss";
 const address = {
   locationHeader: "Lokalizacja",
-  street: "ul. Żywiecka",
+  street: `ul. Żywiecka`,
   city: "34-323 Kocoń",
   mapHeader: "Zobacz lokalizację",
   mapLink: "https://goo.gl/maps/dpea1zRJBmDUNT129",
@@ -12,10 +12,10 @@ const address = {
 
 const contact = {
   contactHeader: "Kontakt",
-  telLabel: "tel. ",
+  telLabel: `tel.`,
   telHref: "tel:+48 516 212 421",
   telValue: "516 212 421",
-  mailLabel: "e-mail: ",
+  mailLabel: `e-mail:`,
   mailHref: "mailto:gosik19801@gmail.com",
   mailValue: "gosik19801@gmail.com",
 };
@@ -35,11 +35,11 @@ const contact = {
       <h2>{contact.contactHeader}</h2>
       <p class="footer__text">
         <span>{contact.telLabel}</span>
-        <a href={contact.telHref}>{contact.telValue}</a>
+        <a href={contact.telHref}> &nbsp;{contact.telValue}</a>
       </p>
       <p class="footer__text">
         <span>{contact.mailLabel}</span>
-        <a href={contact.mailHref}>{contact.mailValue}</a>
+        <a href={contact.mailHref}> &nbsp;{contact.mailValue}</a>
       </p>
     </div>
     <iframe

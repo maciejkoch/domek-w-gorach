@@ -18,6 +18,12 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
 
@@ -34,11 +40,12 @@ const { title } = Astro.props;
       @import "../styles/breakpoints.scss";
 
       :root {
-        --primary-font-family: Graphik, sans-serif;
-        --secondary-font-family: Ivar Display Condensed, serif;
+        --font-family: "Lora", serif;
         --accent: 124, 58, 237;
         --dark-background-color: #7f6a52;
-        --light-font-color: #eae7dd;
+        --light-background-color: #eae7dd;
+        --light-font-color: #f5f2e8;
+        --dark-font-color: #564837;
         --accent-gradient: linear-gradient(
           45deg,
           rgb(var(--accent)),
@@ -51,7 +58,7 @@ const { title } = Astro.props;
 
       html {
         @include reset();
-
+        font-family: var(--font-family);
         scroll-behavior: smooth;
         scroll-padding-top: var(--header-height);
 
@@ -79,68 +86,8 @@ const { title } = Astro.props;
         }
 
         &--with-light-background {
-          background-color: var(--light-font-color);
-          color: var(--dark-background-color);
-        }
-      }
-
-      [astro-icon] {
-        width: 40px;
-        height: 40px;
-      }
-    </style>
-    <style lang="scss" is:global>
-      @import "../styles/reset.scss";
-      @import "../styles/breakpoints.scss";
-
-      :root {
-        --primary-font-family: Graphik, sans-serif;
-        --secondary-font-family: Ivar Display Condensed, serif;
-        --accent: 124, 58, 237;
-        --dark-background-color: rgb(127, 106, 82);
-        --light-font-color: rgb(234, 231, 221);
-        --accent-gradient: linear-gradient(
-          45deg,
-          rgb(var(--accent)),
-          #da62c4 30%,
-          white 60%
-        );
-
-        --header-height: 62px;
-      }
-
-      html {
-        @include reset();
-
-        scroll-behavior: smooth;
-        scroll-padding-top: var(--header-height);
-
-        * {
-          box-sizing: border-box;
-        }
-      }
-
-      .container {
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 0 10px;
-
-        @include device(desktop) {
-          max-width: 1280px;
-        }
-      }
-
-      .section {
-        padding: 40px 0;
-
-        &--with-dark-background {
-          background-color: var(--dark-background-color);
-          color: var(--light-font-color);
-        }
-
-        &--with-light-background {
-          background-color: var(--light-font-color);
-          color: var(--dark-background-color);
+          background-color: var(--light-background-color);
+          color: var(--dark-font-color);
         }
       }
 
