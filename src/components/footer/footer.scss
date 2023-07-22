@@ -5,12 +5,18 @@
 
   &__logo {
     object-fit: contain;
-    width: 215px;
-    height: 46px;
+    width: 160px;
+    height: 42px;
     position: absolute;
     bottom: 36px;
     left: 50%;
-    margin-left: -107px;
+    margin-left: -81px;
+
+    @include device(desktop) {
+      width: 215px;
+      height: 46px;
+      margin-left: -107px;
+    }
   }
 
   &__top {
@@ -72,18 +78,26 @@
       content: "";
       top: 0;
       right: 0;
-      width: calc(50% - 100px);
+      width: calc(50% - 85px);
       height: 1px;
       background-color: var(--dark-background-color);
+
+      @include device(tablet) {
+        width: calc(50% - 100px);
+      }
     }
 
     &::before {
       content: "";
       top: 0;
       right: 0;
-      width: calc(50% - 100px);
+      width: calc(50% - 85px);
       height: 1px;
       background-color: var(--dark-background-color);
+
+      @include device(tablet) {
+        width: calc(50% - 100px);
+      }
     }
   }
 
@@ -95,20 +109,11 @@
 
   &__authors-text {
     text-align: center;
+    padding-bottom: 10px;
 
     @include device(tablet) {
       text-align: end;
+      padding-bottom: 0;
     }
   }
 }
-
-// footer {
-
-//   @include device(tablet) {
-//     color: green;
-//   }
-
-//   @include device(desktop) {
-//     color: red;
-//   }
-// }
