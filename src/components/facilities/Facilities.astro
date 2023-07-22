@@ -1,100 +1,100 @@
 ---
-import './facilities.scss';
-import { Sprite } from 'astro-icon';
+import "./facilities.scss";
+import { Sprite } from "astro-icon";
 
 const columns = [
   [
     {
-      title: 'Salon',
+      title: "Salon",
       items: [
-        { icon: 'mdi:sofa-outline', text: 'rozkładana sofa' },
+        { icon: "mdi:sofa-outline", text: "rozkładana sofa" },
         {
-          icon: 'mdi:fireplace',
-          text: 'elektryczny kominek z funkcją grzania',
+          icon: "mdi:fireplace",
+          text: "elektryczny kominek z funkcją grzania",
         },
-        { icon: 'mdi:television', text: 'telewizor' },
-        { icon: 'mdi:table-chair', text: 'część jadalna' },
-        { icon: 'mdi:sofa', text: 'część wypoczynkowa' },
+        { icon: "mdi:television", text: "telewizor" },
+        { icon: "mdi:table-chair", text: "część jadalna" },
+        { icon: "mdi:sofa", text: "część wypoczynkowa" },
       ],
     },
     {
-      title: '2 Sypialnie',
+      title: "2 Sypialnie",
       items: [
-        { icon: 'mdi:bed', text: '4 pojedyńcze łóżka' },
-        { icon: 'mdi:information-outline', text: 'pościel' },
+        { icon: "mdi:bed", text: "4 pojedyńcze łóżka" },
+        { icon: "mdi:information-outline", text: "pościel" },
       ],
     },
     {
-      title: 'Łazienka',
+      title: "Łazienka",
       items: [
-        { icon: 'mdi:shower-head', text: 'prysznic' },
-        { icon: 'mdi:hair-dryer-outline', text: 'suszarka do włosów' },
-        { icon: 'mdi:information-outline', text: 'suszarka na pranie' },
-      ],
-    },
-  ],
-  [
-    {
-      title: 'Kuchnia',
-      items: [
-        { icon: 'mdi:coffee-maker-outline', text: 'ekspres do kawy' },
-        { icon: 'mdi:microwave', text: 'mikrofalówka' },
-        { icon: 'mdi:kettle-steam-outline', text: 'czajnik' },
-        { icon: 'mdi:fridge-industrial-outline', text: 'lodówka' },
-        { icon: 'mdi:iron-outline', text: 'płyta indukcyjna' },
-        { icon: 'mdi:silverware-fork-knife', text: 'zastawa stołowa (6 osób)' },
-        { icon: 'mdi:pot-steam-outline', text: 'przybory kuchenne, garnki' },
-        { icon: 'mdi:hand-wash-outline', text: 'środki czystości' },
-      ],
-    },
-    {
-      title: 'Taras',
-      items: [
-        { icon: 'mdi:umbrella-beach-outline', text: 'zadaszenie (żagiel)' },
-        {
-          icon: 'mdi:information-outline',
-          text: 'stół + 6 krzeseł',
-        },
-        { icon: 'mdi:grill-outline', text: 'grill' },
+        { icon: "mdi:shower-head", text: "prysznic" },
+        { icon: "mdi:hair-dryer-outline", text: "suszarka do włosów" },
+        { icon: "mdi:information-outline", text: "suszarka na pranie" },
       ],
     },
   ],
   [
     {
-      title: 'Różne',
+      title: "Kuchnia",
       items: [
-        { icon: 'mdi:wifi-arrow-left-right', text: 'bezpłatne Wi-Fi' },
-        { icon: 'mdi:parking', text: 'prywatny parking' },
-        { icon: 'mdi:hanger', text: 'wieszak w przedpokoju' },
+        { icon: "mdi:coffee-maker-outline", text: "ekspres do kawy" },
+        { icon: "mdi:microwave", text: "mikrofalówka" },
+        { icon: "mdi:kettle-steam-outline", text: "czajnik" },
+        { icon: "mdi:fridge-industrial-outline", text: "lodówka" },
+        { icon: "mdi:iron-outline", text: "płyta indukcyjna" },
+        { icon: "mdi:silverware-fork-knife", text: "zastawa stołowa (6 osób)" },
+        { icon: "mdi:pot-steam-outline", text: "przybory kuchenne, garnki" },
+        { icon: "mdi:hand-wash-outline", text: "środki czystości" },
+      ],
+    },
+    {
+      title: "Taras",
+      items: [
+        { icon: "mdi:umbrella-beach-outline", text: "zadaszenie (żagiel)" },
         {
-          icon: 'mdi:information-outline',
-          text: 'elektryczne ogrzewanie podłogowe',
+          icon: "mdi:information-outline",
+          text: "stół + 6 krzeseł",
+        },
+        { icon: "mdi:grill-outline", text: "grill" },
+      ],
+    },
+  ],
+  [
+    {
+      title: "Różne",
+      items: [
+        { icon: "mdi:wifi-arrow-left-right", text: "bezpłatne Wi-Fi" },
+        { icon: "mdi:parking", text: "prywatny parking" },
+        { icon: "mdi:hanger", text: "wieszak w przedpokoju" },
+        {
+          icon: "mdi:information-outline",
+          text: "elektryczne ogrzewanie podłogowe",
         },
       ],
     },
     {
-      title: 'Okolica',
+      title: "Okolica",
       items: [
-        { icon: 'mdi:weather-night', text: 'strefa ciemnego nieba' },
+        { icon: "mdi:weather-night", text: "strefa ciemnego nieba" },
         {
-          icon: 'ic:outline-forest',
-          text: 'widok na góry i las',
+          icon: "ic:outline-forest",
+          text: "widok na góry i las",
         },
         {
-          icon: 'mdi:fence',
-          text: 'ogrodzona posesja o powierzchni 800m2',
+          icon: "mdi:fence",
+          text: "ogrodzona posesja o powierzchni 800m2",
         },
         {
-          icon: 'mdi:bicycle',
-          text: 'trasy dla pieszych i rowerzystów',
+          icon: "mdi:bicycle",
+          text: "trasy dla pieszych i rowerzystów",
         },
         {
-          icon: 'mdi:hiking',
-          text: 'lasy obfitujące w liczne gatunki grzybów',
+          icon: "mdi:hiking",
+          text: "lasy obfitujące w liczne gatunki grzybów",
         },
         {
-          icon: 'mdi:fish',
-          text: 'łowiska na jeziorze dla wędkarzy',
+          icon: "mdi:fish",
+          text: "łowiska na jeziorze dla wędkarzy",
         },
       ],
     },

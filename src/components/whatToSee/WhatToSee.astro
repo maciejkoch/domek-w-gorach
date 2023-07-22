@@ -1,0 +1,102 @@
+---
+import "./whatToSee.scss";
+import { Sprite } from "astro-icon";
+
+const columns = [
+  [
+    {
+      icon: "mdi:pine-tree",
+      title: "Przyroda",
+      items: [
+        { text: "Jezioro Zywieckie", link: "", distance: "15 min" },
+        { text: "Babia Góra", link: "", distance: "60 min" },
+        { text: "Szczyrk", link: "", distance: "50 min" },
+        { text: "Wisła", link: "", distance: "90 min" },
+      ],
+    },
+    {
+      icon: "mdi:castle",
+      title: "Muzea i zamki",
+      items: [
+        {
+          text: "Park Etnograficzny Ziemi Żywieckiej",
+          link: "",
+          distance: "6 min",
+        },
+        {
+          text: "Zamek w Suchej Beskidzkiej",
+          link: "",
+          distance: "20 min",
+        },
+        { text: "Browar Żywiecki", link: "", distance: "30 min" },
+      ],
+    },
+  ],
+  [
+    {
+      icon: "mdi:ski",
+      title: "Stoki narciarskie",
+      items: [
+        { text: "Szczyrk", distance: "55 min" },
+        { text: "Zawoja", distance: "37 min" },
+        { text: "Korbielów", distance: "40 min" },
+        { text: "Góra Żar", distance: "38 min" },
+      ],
+    },
+    {
+      icon: "mdi:silverware-fork-knife",
+      title: "Restauracje",
+      items: [
+        {
+          text: "Gospoda - domowe zestawy obiadowe",
+          link: "https://goo.gl/maps/q7KwPEzWQcCi6Af79",
+          distance: "9 min",
+        },
+        {
+          text: "Strażnica - pyszne i niedrogie dania",
+          link: "",
+          distance: "9 min",
+        },
+      ],
+    },
+  ],
+];
+---
+
+<div class="whatToSee container">
+  <h2 class="whatToSee__headline">Miejsca w okolicy, które warto odwiedzić</h2>
+  <div class="whatToSee__columns-wrap">
+    {
+      columns.map((column) => (
+        <div class="whatToSee__column">
+          {column.map((category) => (
+            <div>
+              <div class="whatToSee__category-wrap">
+                <span>
+                  <Sprite
+                    class="whatToSee__category-icon"
+                    name={category.icon}
+                  />
+                </span>
+                <h3 class="whatToSee__category-title">{category.title}</h3>
+              </div>
+
+              <ul class="whatToSee__category-list">
+                {category.items.map((item) => (
+                  <li class="whatToSee__item">
+                    <p class="whatToSee__item-text">
+                      {item.text}&nbsp;&nbsp;-&nbsp;&nbsp;
+                    </p>
+                    <span class="whatToSee__item-distance">
+                      {item.distance}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      ))
+    }
+  </div>
+</div>
