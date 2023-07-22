@@ -1,6 +1,7 @@
 ---
 import "./touristAttractions.scss";
-import { Content as TouristAttractions } from "../../content/whatToSee.md";
+import { Image } from "@astrojs/image/components";
+
 const elements = [
   {
     name: "Park Etnograficzny Ziemi Żywieckiej",
@@ -27,19 +28,21 @@ Na obszarze ponad 6 ha posadowionych zostało już 19 zabytkowych obiektów arch
 ];
 ---
 
-<div class="attractions container">
-  <ul>
+<div class="container">
+  <ul class="attractions">
     {
       elements.map((element) => (
         <li class="element">
           <figure>
             <div class="element__image">
-              <img
+              <Image
                 class="image"
                 src={element.imageURL}
+                width={370}
+                height={294}
+                aspectRatio="1:1"
+                format="avif"
                 alt={element.imageAlt}
-                width="370"
-                height="294"
               />
               <div class="element__overlay">
                 <p class="element__overlay-text">{element.description}</p>
@@ -54,5 +57,4 @@ Na obszarze ponad 6 ha posadowionych zostało już 19 zabytkowych obiektów arch
       ))
     }
   </ul>
-  <div class="whatToSee__text"><TouristAttractions /></div>
 </div>
