@@ -34,4 +34,25 @@
     font-size: 22px;
     font-weight: 700;
   }
+
+  &__rhyme {
+    padding-top: 10px;
+    border: 7px;
+    border-style: double;
+    border-color: var(--dark-font-color);
+
+    @include device(desktop) {
+      padding-top: 0px;
+    }
+
+    p {
+      font-style: italic;
+      font-weight: 600;
+      min-width: 290px;
+
+      @include device(desktop) {
+        padding-top: 20px;
+      }
+    }
+  }
 }
