@@ -2,19 +2,11 @@
 import "./about-us.scss";
 
 import { Content as AboutUsContent } from "../../content/about-us.md";
+import { Content as AboutUsRhyme } from "../../content/rhyme.md";
 import { Image } from "@astrojs/image/components";
 ---
 
 <div class="about-us container">
   <div class="about-us__text"><AboutUsContent /></div>
-  <div class="about-us__image">
-    <Image
-      src="./src/images-and-icons/wordcloud-aboutUs.png"
-      width={600}
-      height={600}
-      aspectRatio="1:1"
-      format="avif"
-      alt="O nas"
-    />
-  </div>
+  <div class="about-us__rhyme"><AboutUsRhyme /></div>
 </div>
