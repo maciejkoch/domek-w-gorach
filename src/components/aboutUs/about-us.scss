@@ -37,9 +37,9 @@
 
   &__rhyme {
     padding-top: 10px;
-    border: 7px;
-    border-style: double;
-    border-color: var(--dark-font-color);
+    // border: 7px;
+    // border-style: double;
+    // border-color: var(--dark-background-color);
 
     @include device(desktop) {
       padding-top: 0px;
