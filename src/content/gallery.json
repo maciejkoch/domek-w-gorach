@@ -32,7 +32,23 @@
     "alt": "Góry"
   },
   {
+    "url": "./src/images-and-icons/front2.jpg",
+    "alt": "Góry"
+  },
+  {
+    "url": "./src/images-and-icons/front.jpg",
+    "alt": "Góry"
+  },
+  {
+    "url": "./src/images-and-icons/zza-płotu.jpg",
+    "alt": "Góry"
+  },
+  {
     "url": "./src/images-and-icons/taras.jpg",
+    "alt": "Góry"
+  },
+  {
+    "url": "./src/images-and-icons/widok-góry.jpg",
     "alt": "Góry"
   },
   {
@@ -41,6 +57,10 @@
   },
   {
     "url": "./src/images-and-icons/ogrod.jpg",
+    "alt": "Góry"
+  },
+  {
+    "url": "./src/images-and-icons/studnia.jpg",
     "alt": "Góry"
   },
   {
