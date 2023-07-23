@@ -43,18 +43,14 @@
     margin: 20px 0;
   }
 
-  &__item {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
   &__item-text {
     font-size: 20px;
     line-height: 1.5;
+    padding-right: 6px;
   }
 
   &__item-distance {
+    padding-left: 3px;
     font-style: italic;
   }
 }
