@@ -18,13 +18,14 @@
     line-height: 1;
     text-align: left;
     color: var(--light-font-color);
-    padding-top: 40px;
+    padding-top: 530px;
 
     @include device(tablet) {
-      padding-left: 40px;
+      // padding-left: 40px;
     }
 
     @include device(desktop) {
+      padding-top: 452px;
       font-size: 62px;
     }
   }
