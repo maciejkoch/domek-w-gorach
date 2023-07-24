@@ -8,10 +8,19 @@ const columns = [
       icon: "mdi:pine-tree",
       title: "Przyroda",
       items: [
-        { text: "Jezioro Zywieckie", link: "", distance: "15 min" },
-        { text: "Babia Góra", link: "", distance: "60 min" },
-        { text: "Szczyrk", link: "", distance: "50 min" },
-        { text: "Wisła", link: "", distance: "90 min" },
+        { text: "Jezioro Żywieckie", link: "", distance: "15" },
+        { text: "Babia Góra", link: "", distance: "60" },
+        { text: "Szczyrk", link: "", distance: "50" },
+        {
+          text: "Skrzyczne",
+          link: "https://goo.gl/maps/gLz3KTrjXtMm2s3K6",
+          distance: "75",
+        },
+        {
+          text: "Wisła",
+          link: "https://goo.gl/maps/LE4s37fjUCeNVTJL8",
+          distance: "80",
+        },
       ],
     },
     {
@@ -21,26 +30,14 @@ const columns = [
         {
           text: "Park Etnograficzny Ziemi Żywieckiej",
           link: "",
-          distance: "6 min",
+          distance: "6",
         },
         {
           text: "Zamek w Suchej Beskidzkiej",
           link: "",
-          distance: "20 min",
+          distance: "20",
         },
-        { text: "Browar Żywiecki", link: "", distance: "30 min" },
-      ],
-    },
-  ],
-  [
-    {
-      icon: "mdi:ski",
-      title: "Stoki narciarskie",
-      items: [
-        { text: "Szczyrk", distance: "55 min" },
-        { text: "Zawoja", distance: "37 min" },
-        { text: "Korbielów", distance: "40 min" },
-        { text: "Góra Żar", distance: "38 min" },
+        { text: "Browar Żywiecki", link: "", distance: "30" },
       ],
     },
     {
@@ -50,12 +47,83 @@ const columns = [
         {
           text: "Gospoda - domowe zestawy obiadowe",
           link: "https://goo.gl/maps/q7KwPEzWQcCi6Af79",
-          distance: "9 min",
+          distance: "9",
         },
         {
           text: "Strażnica - pyszne i niedrogie dania",
           link: "",
-          distance: "9 min",
+          distance: "9",
+        },
+      ],
+    },
+    {
+      icon: "mdi:shopping-outline",
+      title: "Najbliższy sklep",
+      items: [
+        {
+          text: "Ślemień",
+          link: "https://goo.gl/maps/PxjPbkeoMZJbPB6j7",
+          distance: "8",
+        },
+      ],
+    },
+  ],
+  [
+    {
+      icon: "mdi:heart-plus-outline",
+      title: "Apteka w Ślemieniu",
+      items: [
+        {
+          text: "Ślemień",
+          link: "https://goo.gl/maps/veMd2FqZXDmVTphq9",
+          distance: "5",
+        },
+      ],
+    },
+    {
+      icon: "mdi:ski",
+      title: "Stoki narciarskie",
+      items: [
+        { text: "Szczyrk", distance: "55" },
+        { text: "Zawoja", distance: "37" },
+        { text: "Korbielów", distance: "40" },
+        { text: "Góra Żar", distance: "38" },
+      ],
+    },
+    {
+      icon: "mdi:church",
+      title: "Kościoły",
+      items: [
+        {
+          text: "Kościół pw. św. Józefa Robotnika w Kurowie",
+          link: "https://goo.gl/maps/rxuigcwB14yq2sef7",
+          distance: "5",
+        },
+        {
+          text: "Kościół Narodzenia św. Jana Chrzciciela w Ślemieniu",
+          link: "https://goo.gl/maps/bEVtSPDbr6fuJxYP9",
+          distance: "8",
+        },
+      ],
+    },
+    {
+      icon: "mdi:information-variant",
+      title: "Inne atrakcje",
+      items: [
+        {
+          text: "Stadnina Koni - KAS-MAR",
+          link: "https://goo.gl/maps/FypQaPtLveHSvNrQ6",
+          distance: "3",
+        },
+        {
+          text: "Zapora w Tresnej",
+          link: "https://goo.gl/maps/TeYJ5aZs1uhFx4oY8",
+          distance: "40",
+        },
+        {
+          text: "Zapora w Porąbce",
+          link: "https://goo.gl/maps/Q8EhjLAApDrnW4YUA",
+          distance: "50",
         },
       ],
     },
@@ -85,9 +153,8 @@ const columns = [
                 {category.items.map((item) => (
                   <li class="whatToSee__item">
                     <span class="whatToSee__item-text">{item.text}</span>
-                    -&nbsp;
                     <span class="whatToSee__item-distance">
-                      {item.distance}
+                      -&nbsp;&nbsp;{item.distance}&nbsp;min
                     </span>
                   </li>
                 ))}
@@ -99,3 +166,8 @@ const columns = [
     }
   </div>
 </div>
+
+<!-- <Sprite
+                      class="whatToSee__list-icon"
+                      name={"mdi:menu-right"}
+                    /> -->
