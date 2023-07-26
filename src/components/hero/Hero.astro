@@ -4,18 +4,24 @@ import { Sprite } from "astro-icon";
 import "./hero.scss";
 // import heroImage from "../images-and-icons/IMG-20230717-WA0004.jpg";
 
-const src = "./src/images-and-icons/zza-płotu_edited.jpg";
+const src = "./src/images-and-icons/hero-edited.jpg";
 const alt = "Domek na granicy";
-const ratio = "2:1";
+const ratio = "16:9";
 const widths = [400, 800, 1200];
-const text = `Odpocznij, <br />ciesz się chwilą <br />w bliskości z naturą`;
 const aboutUsText = `Poznaj nas`;
 ---
 
 <div id="hero" class="hero">
-  <Picture src={src} widths={widths} aspectRatio={ratio} alt={alt} />
+  <Picture
+    src={src}
+    widths={widths}
+    aspectRatio={ratio}
+    alt={alt}
+    fit="cover"
+    position="attention"
+  />
   <div class="hero__text-container">
-    <div class="container">
+    <div>
       <h2 class="hero__headline">
         <span class="hero__headline-italic">Odpocznij,</span>
         <br />ciesz się chwilą <br />w&nbsp;bliskości z&nbsp;naturą
