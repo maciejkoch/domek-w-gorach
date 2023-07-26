@@ -8,29 +8,34 @@
   &__text-container {
     position: absolute;
     top: 0;
-    width: 100%;
+    max-width: 300px;
     height: 100%;
+    display: flex;
+    padding-left: 41px;
+    padding-top: 30px;
+
+    @include device(desktop) {
+      max-width: 100%;
+      align-items: flex-end;
+      padding-bottom: 40px;
+      padding-left: 30px;
+    }
   }
 
   &__headline {
-    font-size: 37px;
+    font-size: 35px;
     font-weight: 400;
     line-height: 1;
     text-align: left;
     color: var(--light-font-color);
-    padding-top: 40px;
-
-    @include device(tablet) {
-      padding-left: 40px;
-    }
 
     @include device(desktop) {
-      font-size: 62px;
+      font-size: 53px;
     }
   }
 
   &__headline-italic {
-    font-size: 55px;
+    font-size: 45px;
     font-style: italic;
     font-weight: 500;
     line-height: 1.2;
@@ -44,10 +49,6 @@
     padding-top: 30px;
     display: flex;
     align-items: center;
-
-    @include device(tablet) {
-      padding-left: 40px;
-    }
 
     a {
       color: var(--light-font-color);
@@ -73,6 +74,5 @@ picture {
 img {
   width: 100%;
   height: 100%;
-  // object-fit: none;
   object-fit: cover;
 }
