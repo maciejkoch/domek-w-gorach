@@ -61,19 +61,6 @@ const columns = [
   ],
   [
     {
-      title: "Różne",
-      items: [
-        { icon: "mdi:wifi-arrow-left-right", text: "bezpłatne Wi-Fi" },
-        { icon: "mdi:parking", text: "prywatny parking" },
-        { icon: "mdi:hanger", text: "wieszak w przedpokoju" },
-        {
-          icon: "mdi:check",
-          text: "elektryczne ogrzewanie podłogowe",
-        },
-        { icon: "mdi:dog-side-off", text: "Zwierzęta nie są akceptowane" },
-      ],
-    },
-    {
       title: "Okolica",
       items: [
         { icon: "mdi:weather-night", text: "strefa ciemnego nieba" },
@@ -99,6 +86,23 @@ const columns = [
         },
       ],
     },
+    {
+      title: "Różne",
+      items: [
+        { icon: "mdi:wifi-arrow-left-right", text: "bezpłatne Wi-Fi" },
+        { icon: "mdi:parking", text: "prywatny parking" },
+        { icon: "mdi:hanger", text: "wieszak w przedpokoju" },
+        {
+          icon: "mdi:check",
+          text: "elektryczne ogrzewanie podłogowe",
+        },
+        { icon: "mdi:dog-side-off", text: "Zwierzęta nie są akceptowane" },
+        {
+          icon: "mdi:hand-back-left-off",
+          text: `Brak możliwości organizacji imprez panieńskich i kawalerskich`,
+        },
+      ],
+    },
   ],
 ];
 ---
@@ -116,7 +120,7 @@ const columns = [
                   <span>
                     <Sprite class="facilities__item-icon" name={item.icon} />
                   </span>
-                  {item.text}
+                  <span class="facilities__item-text">{item.text}</span>
                 </li>
               ))}
             </ul>
