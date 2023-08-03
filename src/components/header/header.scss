@@ -23,6 +23,16 @@
 
 .media-icon {
   color: var(--dark-font-color);
+  border-radius: 33px;
+  padding: 4px;
+
+  &:hover,
+  :focus,
+  :active {
+    background-color: var(--dark-font-color);
+    color: var(--light-font-color);
+    transition: all 400ms cubic-bezier(0.77, 0, 0.175, 1);
+  }
 }
 
 .navigation {
@@ -62,7 +72,7 @@
   border: none;
   outline: none;
   color: var(--dark-font-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  // transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @include device(desktop) {
     display: none;
@@ -70,7 +80,6 @@
 }
 
 .mobile-menu-closing-icon {
-  display: flex;
   align-items: center;
   justify-content: center;
   background-color: transparent;
@@ -105,8 +114,13 @@
     position: absolute;
     top: 10px;
     right: 6px;
-    background-color: transparent;
-    stroke: var(--color-primary-light);
+
+    &:hover,
+    :focus,
+    :active {
+      color: #4a3e2f;
+      transition: all 400ms cubic-bezier(0.77, 0, 0.175, 1);
+    }
   }
 
   @include device(tablet) {
@@ -144,12 +158,31 @@
   &__media-links-container {
     display: flex;
     flex-direction: column;
-    padding-top: 30px;
+    padding-top: 90px;
+  }
+
+  &__media-links-headline {
+    color: var(--light-font-color);
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  &__media-icons-wrap {
+    text-align: center;
+    padding-top: 20px;
   }
 
   &__media-icon {
     color: var(--light-font-color);
     margin-bottom: 10px;
+
+    &:hover,
+    :focus,
+    :active {
+      color: #4a3e2f;
+      transition: all 400ms cubic-bezier(0.77, 0, 0.175, 1);
+    }
   }
 
   &__logo-wrap {
