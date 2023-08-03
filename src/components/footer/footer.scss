@@ -52,9 +52,16 @@
     display: block;
     margin-top: 10px;
     margin-bottom: 30px;
+    min-width: 158px;
 
     @include device(tablet) {
       margin-bottom: 0;
+    }
+
+    &:hover,
+    :active,
+    :focus {
+      font-weight: 900;
     }
   }
 
@@ -116,4 +123,28 @@
       padding-bottom: 0;
     }
   }
+}
+
+.footer-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: var(--dark-font-color);
+}
+
+.footer-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -1px;
+  left: 0;
+  background-color: var(--dark-font-color);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.footer-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }

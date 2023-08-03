@@ -38,7 +38,12 @@ const items = [
         {
           items.map((item) => (
             <li class="navigation__item">
-              <a href={item.link}>{item.name}</a>
+              <a
+                href={item.link}
+                class="navigation__link hover-underline-animation"
+              >
+                {item.name}
+              </a>
             </li>
           ))
         }
@@ -78,7 +83,7 @@ const items = [
               items.map((item) => (
                 <li class="mobile-menu__item">
                   <a
-                    class="mobile-menu__link mobile-menu__link--active js-close-menu"
+                    class="mobile-menu__link mobile-menu__link--active js-close-menu hover-mobile-animation"
                     href={item.link}
                   >
                     {item.name}
