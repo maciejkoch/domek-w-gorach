@@ -24,6 +24,10 @@ const items = [
     link: "#contact",
   },
 ];
+
+const bookingLink = "https://www.booking.com/Share-XVyKpL";
+const airbnbLink =
+  "https://www.airbnb.pl/rooms/947814500940059891?guests=1&adults=1&s=67&unique_share_id=62925a32-9165-4d34-8dd8-f9da3e757af8";
 ---
 
 <header class="header">
@@ -51,11 +55,11 @@ const items = [
     </nav>
 
     <div class="media-links-container">
-      <a class="link" href="./index.html">
+      <a class="link" href={bookingLink}>
         <Sprite class="media-icon" name="tabler:brand-booking" />
       </a>
-      <a class="link" href="./index.html">
-        <Sprite class="media-icon" name="ic:baseline-facebook" />
+      <a class="link" href={airbnbLink}>
+        <Sprite class="media-icon" name="tabler:brand-airbnb" />
       </a>
     </div>
 
@@ -94,18 +98,30 @@ const items = [
           </ul>
 
           <div class="mobile-menu__media-links-container">
-            <a class="mobile-menu__media-link" href="./index.html">
-              <Sprite
-                class="mobile-menu__media-icon"
-                name="tabler:brand-booking"
-              />
-            </a>
-            <a class="mobile-menu__media-link" href="./index.html">
-              <Sprite
-                class="mobile-menu__media-icon"
-                name="ic:baseline-facebook"
-              />
-            </a>
+            <h3 class="mobile-menu__media-links-headline">
+              Znajdź nas i&nbsp;zarezerwuj swój pobyt na&nbsp;Booking.com
+              lub&nbsp;Airbnb:
+            </h3>
+            <div class="mobile-menu__media-icons-wrap">
+              <a
+                class="mobile-menu__media-link"
+                href="https://www.booking.com/Share-cw37iub"
+              >
+                <Sprite
+                  class="mobile-menu__media-icon"
+                  name="tabler:brand-booking"
+                />
+              </a>
+              <a
+                class="mobile-menu__media-link"
+                href="https://www.airbnb.pl/rooms/947814500940059891?guests=1&adults=1&s=67&unique_share_id=62925a32-9165-4d34-8dd8-f9da3e757af8"
+              >
+                <Sprite
+                  class="mobile-menu__media-icon"
+                  name="tabler:brand-airbnb"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </div>
